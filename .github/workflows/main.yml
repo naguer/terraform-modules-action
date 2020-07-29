@@ -7,8 +7,15 @@ jobs:
     steps:
     - name: Repository Checkout 
       uses: actions/checkout@v2
+      
     - name: Terraform Setup
       uses: hashicorp/setup-terraform@v1
+      
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -check
+      
+    - name: "Check file existence"
+      uses: andstor/file-existence-action@v1
+      with:
+        files: "CHANGELOG.md, README.md"
