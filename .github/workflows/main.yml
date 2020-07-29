@@ -14,14 +14,8 @@ jobs:
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -check
-      
-    - name: Check file existence
-      uses: andstor/file-existence-action@v1
-      with:
-        files: "CHANGELOG.md, README.md"
-        allow_failure: true
         
-    - name: terraform docs inside the USAGE.md and push changes back to PR branch
+    - name: Terraform docs to USAGE.md
       uses: Dirrk/terraform-docs@v1.0.8
       with:
         tf_docs_working_dir: .
