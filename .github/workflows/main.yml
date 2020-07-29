@@ -9,6 +9,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
+      - name: terraform setup
+        uses: hashicorp/setup-terraform@v1
 
       - name: terraform fmt
-        uses: dflook/terraform-fmt-check@v1
+        uses: hashicorp/setup-terraform@v1
+      
+      - name: Terraform fmt
+        id: fmt
+        run: terraform fmt
+        continue-on-error: true
