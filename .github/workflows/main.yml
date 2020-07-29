@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   terraform:
-    name: 'Terraform modules check'
+    name: Terraform modules check
     runs-on: ubuntu-latest
     steps:
     - name: Repository Checkout 
