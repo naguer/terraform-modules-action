@@ -1,15 +1,14 @@
-name: 'Terraform'
-
 on: [push]
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'Terraform modules check'
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: hashicorp/setup-terraform@v1
-
+    - name: Repository Checkout 
+      uses: actions/checkout@v2
+    - name: Terraform Setup
+      uses: hashicorp/setup-terraform@v1
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -check
