@@ -12,10 +12,7 @@ jobs:
         
       - name: terraform setup
         uses: hashicorp/setup-terraform@v1
-
-      - name: terraform fmt
-        uses: hashicorp/setup-terraform@v1
-      
+             
       - name: Terraform fmt
         id: fmt
         run: terraform fmt
