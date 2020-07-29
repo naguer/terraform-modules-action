@@ -23,8 +23,6 @@ jobs:
     - name: Terraform Lint
       id: tflint
       uses: rickardl/tflint-action@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Terraform docs to USAGE.md
       id: docs
