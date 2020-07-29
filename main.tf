@@ -2,8 +2,8 @@
 resource "aws_backup_vault" "ab_vault" {
   count       = var.enabled && var.vault_name != null ? 1 : 0
   name        = var.vault_name
-  kms_key_arn    = var.vault_kms_key_arn
-    tags        = var.tags
+  kms_key_arn = var.vault_kms_key_arn
+  tags        = var.tags
 }
 
 # AWS Backup plan
