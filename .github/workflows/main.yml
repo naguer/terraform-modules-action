@@ -22,7 +22,7 @@ jobs:
         
     - name: Terraform Lint
       id: tflint
-      uses: rickardl/tflint-action@v1
+      uses: rickardl/tflint-action@v1.5
         
     - name: Terraform docs to USAGE.md
       id: docs
