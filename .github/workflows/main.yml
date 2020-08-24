@@ -20,6 +20,12 @@ jobs:
       id: fmt
       run: terraform fmt -check -recursive -diff
       
+    - name: "Check file existence"
+      uses: andstor/file-existence-action@v1
+      with:
+        files: "CHANGELOG.md, README.md"
+        allow_failure: true
+      
     - name: Terraform Security Scan
       id: tfsec
       uses: triat/terraform-security-scan@v1
